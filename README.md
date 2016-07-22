@@ -1,4 +1,4 @@
-# Fake Bluetooth GPS
+# Fake Bluetooth GPS for Android
 
 Fake bluetooth GPS for Android. Allows a device to act as a GPS sending NMEA data over bluetooth. 
 
@@ -21,6 +21,7 @@ fakeBluetoothGPS.start();
 // ...
 
 fakeBluetoothGPS.move(newPosition);
+```
 
 ### Limitations
 
