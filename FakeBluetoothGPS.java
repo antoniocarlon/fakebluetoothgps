@@ -1,4 +1,4 @@
-package gps.fake;
+package es.jcyl.ita.testmap;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -83,7 +83,7 @@ public class FakeBluetoothGPS {
 
                 gprmc.setLength(0);
 
-                gprmc.append("$GPRMC,"); // Recommended Minimum sentence
+                gprmc.append("$GPRMC"); // Recommended Minimum sentence
                 gprmc.append(",");
                 gprmc.append(timeFormat.format(date)); // Fix time
                 gprmc.append(",");
@@ -129,7 +129,7 @@ public class FakeBluetoothGPS {
     private String getEastWest() {
         String output = "E";
 
-        if (currentLatLng.latitude < 0) {
+        if (currentLatLng.longitude < 0) {
             output = "W";
         }
 
@@ -139,7 +139,7 @@ public class FakeBluetoothGPS {
     private String getNorthSouth() {
         String output = "N";
 
-        if (currentLatLng.longitude < 0) {
+        if (currentLatLng.latitude < 0) {
             output = "S";
         }
 
